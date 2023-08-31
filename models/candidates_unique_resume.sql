@@ -1,5 +1,4 @@
 WITH
-
 cv_uploaded AS (
     SELECT
       user_id AS user_id
