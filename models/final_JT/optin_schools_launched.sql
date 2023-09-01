@@ -8,6 +8,8 @@ SELECT
     opt.current_sign_in_at,
     cu.has_resume,
     cu.in_shortlist,
+    cu.is_interested,
+    cu.is_approved,
     opt.is_cc,
     opt.jt_country,
     opt.jt_intranet_status,
@@ -15,5 +17,5 @@ SELECT
 
 FROM jobteaser-397609.jobteaser.optin_schools_launched AS opt
 
-left join {{ ref("candidates_unique") }} as cu
+left join {{ ref("fin_candidates_unique") }} as cu
 ON opt.user_id = cu.user_id
